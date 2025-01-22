@@ -49,7 +49,7 @@
                   <li>{step}</li>
                 {/each}
               </ul>
-              <a href="#" class="btn btn-primary">Ver receita completa</a>
+              <a href="" class="btn btn-primary">Ver receita completa</a>
             </div>
           </div>
         </div>
