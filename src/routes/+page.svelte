@@ -143,6 +143,6 @@
   </div>
 
   <div class="footer">
-    <p>Feito com 💻 por [Seu Nome]. <br /> © 2025 Todos os direitos reservados.</p>
+    <p>Feito com 💻 por Emanuelle Dias. <br /> © 2025 Todos os direitos reservados 🐈🐈.</p>
   </div>
 </main>
