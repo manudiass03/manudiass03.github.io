@@ -4,7 +4,7 @@
   const curiosidades = {
     preto: {
       titulo: 'Gato Preto',
-      imagem: '/assets/images/gato-preto.jpg',
+      imagem: '/gato-preto.jpg',
       descricao: 'Os gatos pretos têm uma longa história repleta de mitos e crenças populares, sendo frequentemente associados a superstições. A cor preta é causada pela presença de um gene recessivo, que resulta em uma pelagem completamente escura.',
       curiosidades: [
         "Os gatos pretos são frequentemente vistos em superstições, principalmente em países ocidentais, onde acredita-se que eles trazem boa ou má sorte.",
@@ -15,7 +15,7 @@
     },
     branco: {
       titulo: 'Gato Branco',
-      imagem: '/assets/images/gato-branco.jpg',
+      imagem: '/gato-branco.jpg',
       descricao: 'Os gatos brancos têm uma aparência radiante e impressionante. A pelagem branca é uma mutação genética que afeta a distribuição de pigmentos no pelo, resultando em uma pelagem completamente branca.',
       curiosidades: [
         "Gatos brancos têm uma maior tendência à surdez, uma característica comum devido à mutação genética que também causa a pelagem branca.",
@@ -25,7 +25,7 @@
     },
     cinza: {
       titulo: 'Gato Cinza',
-      imagem: '/assets/images/gato-cinza.jpg',
+      imagem: '/gato-cinza.jpg',
       descricao: 'Os gatos cinzas possuem uma pelagem elegante e são muitas vezes confundidos com gatos de pelagem azul. A cor cinza pode variar de tons mais claros até o cinza escuro, e é resultado da combinação de genes específicos.',
       curiosidades: [
         "Gatos cinzas podem ter pelagens que variam do cinza claro até o cinza escuro, e essa cor é muitas vezes chamada de 'azul' em algumas raças.",
