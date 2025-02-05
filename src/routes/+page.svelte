@@ -22,7 +22,7 @@
         "Além da surdez, alguns gatos brancos podem também ser mais sensíveis à luz solar e, por isso, precisam de cuidados extras com a exposição ao sol.",
         "Embora muitos gatos brancos sejam extremamente adoráveis e populares, eles podem exigir cuidados específicos, como visitas regulares ao veterinário."
       ]
-    },
+    }, 
     cinza: {
       titulo: 'Gato Cinza',
       imagem: '/gato-cinza.jpg',
