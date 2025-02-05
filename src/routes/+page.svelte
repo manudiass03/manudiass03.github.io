@@ -1,54 +1,148 @@
-+layout.svelte:
 <script>
-  import { onMount } from 'svelte';
+  let corSelecionada = 'preto';
+
+  const curiosidades = {
+    preto: {
+      titulo: 'Gato Preto',
+      imagem: '/gato-preto.jpg',
+      descricao: 'Os gatos pretos têm uma longa história repleta de mitos e crenças populares, sendo frequentemente associados a superstições. A cor preta é causada pela presença de um gene recessivo, que resulta em uma pelagem completamente escura.',
+      curiosidades: [
+        "Os gatos pretos são frequentemente vistos em superstições, principalmente em países ocidentais, onde acredita-se que eles trazem boa ou má sorte.",
+        "No entanto, em algumas culturas, como na Egito Antigo, os gatos pretos eram vistos como símbolos de boa sorte e proteção.",
+        "A cor preta também é associada à genética recessiva, o que significa que para um gato nascer preto, ambos os pais precisam carregar o gene da pelagem escura.",
+        "Gatos pretos têm a mesma personalidade que outras cores, mas por conta da superstição, muitas vezes são mais difíceis de serem adotados."
+      ]
+    },
+    branco: {
+      titulo: 'Gato Branco',
+      imagem: '/gato-branco.jpg',
+      descricao: 'Os gatos brancos têm uma aparência radiante e impressionante. A pelagem branca é uma mutação genética que afeta a distribuição de pigmentos no pelo, resultando em uma pelagem completamente branca.',
+      curiosidades: [
+        "Gatos brancos têm uma maior tendência à surdez, uma característica comum devido à mutação genética que também causa a pelagem branca.",
+        "Além da surdez, alguns gatos brancos podem também ser mais sensíveis à luz solar e, por isso, precisam de cuidados extras com a exposição ao sol.",
+        "Embora muitos gatos brancos sejam extremamente adoráveis e populares, eles podem exigir cuidados específicos, como visitas regulares ao veterinário."
+      ]
+    },
+    cinza: {
+      titulo: 'Gato Cinza',
+      imagem: '/gato-cinza.jpg',
+      descricao: 'Os gatos cinzas possuem uma pelagem elegante e são muitas vezes confundidos com gatos de pelagem azul. A cor cinza pode variar de tons mais claros até o cinza escuro, e é resultado da combinação de genes específicos.',
+      curiosidades: [
+        "Gatos cinzas podem ter pelagens que variam do cinza claro até o cinza escuro, e essa cor é muitas vezes chamada de 'azul' em algumas raças.",
+        "Eles são conhecidos por serem mais calmos e equilibrados em sua personalidade, embora isso dependa de cada gato individualmente.",
+        "A cor cinza é particularmente comum em raças como o Chartreux e o Russian Blue, que são conhecidos por suas pelagens densas e macias."
+      ]
+    }
+  };
+
+  function changeCor(cor) {
+    corSelecionada = cor;
+  }
 </script>
 
-<nav class="p-4 bg-gray-800 text-white flex justify-center space-x-4">
-  <a href="/" class="hover:underline">Início</a>
-  <a href="/sobre" class="hover:underline">Sobre</a>
-  <a href="/contato" class="hover:underline">Contato</a>
-</nav>
+<style>
+  main {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 30px;
+  }
 
-<slot />
+  h1 {
+    text-align: center;
+    color: #555;
+    font-size: 2.5em;
+  }
 
-<footer class="footer text-center mt-6 p-4 bg-gray-200">
-  <p>Desenvolvido por [Seu Nome] - Série [Sua Série]</p>
-</footer>
+  .gato-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+  }
 
-+page.svelte:
-<script>
-  import { onMount } from 'svelte';
-  const catColors = [
-    { name: "Preto", image: "https://placekitten.com/300/200", description: "Gatos pretos são misteriosos e elegantes." },
-    { name: "Branco", image: "https://placekitten.com/301/200", description: "Gatos brancos simbolizam paz e pureza." },
-    { name: "Cinza", image: "https://placekitten.com/302/200", description: "Gatos cinza são sofisticados e reservados." },
-    { name: "Laranja", image: "https://placekitten.com/303/200", description: "Gatos laranja são brincalhões e carismáticos." },
-    { name: "Siamês", image: "https://placekitten.com/304/200", description: "Siameses são falantes e muito apegados aos donos." },
-    { name: "Tigrado", image: "https://placekitten.com/305/200", description: "Gatos tigrados têm um padrão único e são ágeis." },
-    { name: "Bicolor", image: "https://placekitten.com/306/200", description: "Bicolores possuem lindas combinações de cores." },
-    { name: "Tricolor", image: "https://placekitten.com/307/200", description: "Tricolores são quase sempre fêmeas." },
-    { name: "Chocolate", image: "https://placekitten.com/308/200", description: "Gatos chocolate são raros e muito cobiçados." },
-    { name: "Lilás", image: "https://placekitten.com/309/200", description: "Lilás é uma tonalidade suave e encantadora." }
-  ];
-</script>
+  .gato-info img {
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
 
-<main class="container mx-auto p-6">
-  <h1 class="text-3xl font-bold text-center mb-6">Cores de Gatos</h1>
-  <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-    {#each catColors as cat}
-      <div class="card bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src={cat.image} alt={cat.name} class="w-full h-40 object-cover" />
-        <h3 class="text-lg font-bold text-center p-2">{cat.name}</h3>
-        <p class="text-sm text-center p-2">{cat.description}</p>
-      </div>
-    {/each}
+  .gato-info h2 {
+    font-size: 2em;
+    color: #2c3e50;
+  }
+
+  .gato-info p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #444;
+  }
+
+  .gato-info ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .gato-info ul li {
+    margin: 10px 0;
+    font-size: 1.1em;
+  }
+
+  .menu-cor {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .menu-cor button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .menu-cor button:hover {
+    background-color: #2980b9;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #777;
+  }
+</style>
+
+<main>
+  <h1>Curiosidades sobre a Cor dos Gatos</h1>
+
+  <div class="menu-cor">
+    <button on:click={() => changeCor('preto')}>Preto</button>
+    <button on:click={() => changeCor('branco')}>Branco</button>
+    <button on:click={() => changeCor('cinza')}>Cinza</button>
+  </div>
+
+  <div class="gato-info">
+    <img src={curiosidades[corSelecionada].imagem} alt={curiosidades[corSelecionada].titulo} />
+    <h2>{curiosidades[corSelecionada].titulo}</h2>
+    <p>{curiosidades[corSelecionada].descricao}</p>
+    <ul>
+      {#each curiosidades[corSelecionada].curiosidades as curiosidade}
+        <li>{curiosidade}</li>
+      {/each}
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>Feito com 💻 por Emanuelle Dias. <br /> © 2025 Todos os direitos reservados 🐈🐈.</p>
   </div>
 </main>
-
-+page.svelte (Sobre):
-<h1 class="text-3xl font-bold text-center mt-6">Sobre o Site</h1>
-<p class="text-center mt-4">Este site foi criado para mostrar diferentes cores de gatos e suas características.</p>
-
-+page.svelte (Contato):
-<h1 class="text-3xl font-bold text-center mt-6">Contato</h1>
-<p class="text-center mt-4">Para mais informações, envie um e-mail para contato@exemplo.com.</p>
