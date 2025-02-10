@@ -96,7 +96,7 @@
 
 {#if page === 'home'}
     <div class="container">
-        <h1>Galeria de Cores de Gatos</h1>
+        <h1>🐈Galeria de Cores de Gatos🐈</h1>
         <div class="gallery">
             {#each colors as cat}
                 <div class="card" style="background: {cat.color}; color: {cat.textColor}">
@@ -117,14 +117,6 @@
         <p>Quer saber mais sobre gatos? Entre em contato pelo email: <b>emanuelle.dias@estudante.ifms.edu.br</b></p>
     </div>
 {/if}
-</div>  
-        <div class="big-card">
-            <h2>Conheça o Laranjo</h2>
-            <img src="laranjo.jpg" alt="Laranjo">
-            <p>O Laranjo é um gato muito gordinho e tem cerca de 9 meses. Ele adora sachê, subir na mesa e brincar com bolinhas de papel!</p>
-        </div>
-    </div>
-
 
 <footer>
     <p>Feito por Emanuelle Dias - Informática 4B</p>
