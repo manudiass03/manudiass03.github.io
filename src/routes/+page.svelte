@@ -2,15 +2,15 @@
     import { onMount } from 'svelte';
     let page = 'home';
     let colors = [
-        { name: 'Branco', fact: 'Gatos brancos podem ter olhos azuis, mas muitos são surdos devido a um gene ligado à cor.', color: '#D3D3D3', image: 'branco.jpg' },
-        { name: 'Preto', fact: 'Gatos pretos são considerados símbolo de sorte em alguns países.', color: '#000000', image: 'preto.jpg' },
-        { name: 'Cinza', fact: 'O gato cinza russo é conhecido por sua pelagem macia e personalidade afetuosa.', color: '#808080', image: 'cinza.jpg' },
-        { name: 'Laranja', fact: 'Gatos laranjas costumam ser machos devido a um gene ligado ao cromossomo X.', color: '#FFA500', image: 'laranja.jpg' },
-        { name: 'Siamês', fact: 'Os siameses nascem brancos e desenvolvem suas cores à medida que crescem.', color: '#F5DEB3', image: 'siames.jpg' },
-        { name: 'Rajado', fact: 'O padrão rajado é o mais comum entre gatos, presente em diversas raças.', color: '#D2691E', image: 'rajado.jpg' },
-        { name: 'Calico', fact: 'Gatos calicos são quase sempre fêmeas devido à combinação genética das cores.', color: '#FFCC00', image: 'calico.jpg' },
-        { name: 'Chocolate', fact: 'Gatos chocolate são raros e geralmente pertencem à raça Havana Brown.', color: '#5C3317', image: 'chocolate.jpg' },
-        { name: 'Frajola', fact: 'Os gatos Frajola possuem a clássica coloração preta e branca e são conhecidos por serem brincalhões.', color: '#000000', image: 'frajola.jpg' }
+        { name: 'Branco', fact: 'Gatos brancos podem ter olhos azuis, mas muitos são surdos devido a um gene ligado à cor. Além disso, sua pelagem reflete a luz do sol, tornando-os mais suscetíveis a queimaduras solares.', color: '#D3D3D3', image: 'branco.jpg' },
+        { name: 'Preto', fact: 'Gatos pretos são considerados símbolo de sorte em alguns países. São conhecidos por sua resistência e elegância, além de serem menos propensos a doenças genéticas.', color: '#000000', image: 'preto.jpg' },
+        { name: 'Cinza', fact: 'O gato cinza russo é conhecido por sua pelagem macia e personalidade afetuosa. Eles costumam ser brincalhões e leais aos seus donos.', color: '#808080', image: 'cinza.jpg' },
+        { name: 'Laranja', fact: 'Gatos laranjas costumam ser machos devido a um gene ligado ao cromossomo X. Eles têm uma personalidade extrovertida e costumam ser muito sociáveis.', color: '#FFA500', image: 'laranja.jpg' },
+        { name: 'Siamês', fact: 'Os siameses nascem brancos e desenvolvem suas cores à medida que crescem. São muito vocais e adoram interagir com seus donos.', color: '#F5DEB3', image: 'siames.jpg' },
+        { name: 'Rajado', fact: 'O padrão rajado é o mais comum entre gatos, presente em diversas raças. Eles são ágeis, espertos e ótimos caçadores.', color: '#D2691E', image: 'rajado.jpg' },
+        { name: 'Calico', fact: 'Gatos calicos são quase sempre fêmeas devido à combinação genética das cores. Sua pelagem única os torna muito desejados por amantes de gatos.', color: '#FFCC00', image: 'calico.jpg' },
+        { name: 'Chocolate', fact: 'Gatos chocolate são raros e geralmente pertencem à raça Havana Brown. São conhecidos por sua personalidade afetuosa e lealdade.', color: '#5C3317', image: 'chocolate.jpg' },
+        { name: 'Frajola', fact: 'Os gatos Frajola possuem a clássica coloração preta e branca e são conhecidos por serem brincalhões e amigáveis. Seu padrão de cores é popular em diversas raças.', color: '#000000', image: 'frajola.jpg' }
     ];
 </script>
 
@@ -39,7 +39,7 @@
     }
     .gallery {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
         padding: 20px;
     }
@@ -48,15 +48,20 @@
         border-radius: 10px;
         color: white;
         font-weight: bold;
-        min-height: 220px;
+        min-height: 250px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
     .card img {
-        width: 120px;
-        height: 120px;
+        width: 130px;
+        height: 130px;
         border-radius: 50%;
         object-fit: cover;
         margin-bottom: 10px;
@@ -105,4 +110,3 @@
     <p>Feito por Emanuelle Dias - Informática 4B</p>
     <p>Email: <b>seuemail@exemplo.com</b></p>
 </footer>
-
