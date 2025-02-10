@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
     let page = 'home';
     let colors = [
-        { name: 'Branco', fact: 'Gatos brancos podem ter olhos azuis, mas muitos são surdos devido a um gene ligado à cor.', color: '#ffffff', image: 'branco.jpg' },
+        { name: 'Branco', fact: 'Gatos brancos podem ter olhos azuis, mas muitos são surdos devido a um gene ligado à cor.', color: '#D3D3D3', image: 'branco.jpg' },
         { name: 'Preto', fact: 'Gatos pretos são considerados símbolo de sorte em alguns países.', color: '#000000', image: 'preto.jpg' },
         { name: 'Cinza', fact: 'O gato cinza russo é conhecido por sua pelagem macia e personalidade afetuosa.', color: '#808080', image: 'cinza.jpg' },
         { name: 'Laranja', fact: 'Gatos laranjas costumam ser machos devido a um gene ligado ao cromossomo X.', color: '#FFA500', image: 'laranja.jpg' },
@@ -39,24 +39,24 @@
     }
     .gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(4, 1fr);
         gap: 20px;
         padding: 20px;
     }
     .card {
-        padding: 15px;
+        padding: 20px;
         border-radius: 10px;
         color: white;
         font-weight: bold;
-        min-height: 180px;
+        min-height: 220px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
     .card img {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
         border-radius: 50%;
         object-fit: cover;
         margin-bottom: 10px;
@@ -64,11 +64,20 @@
     .container {
         padding: 20px;
     }
+    h1 {
+        text-align: center;
+    }
+    footer {
+        background: #333;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        margin-top: 20px;
+    }
 </style>
 
 <nav>
     <button on:click={() => page = 'home'}>Home</button>
-    <button on:click={() => page = 'sobre'}>Sobre</button>
     <button on:click={() => page = 'contato'}>Contato</button>
 </nav>
 
@@ -85,14 +94,15 @@
             {/each}
         </div>
     </div>
-{:else if page === 'sobre'}
-    <div class="container">
-        <h1>Sobre os Gatos</h1>
-        <p>Os gatos são animais fascinantes e cheios de curiosidades. Desde suas habilidades de comunicação até suas cores variadas, há muito para aprender sobre eles.</p>
-    </div>
 {:else if page === 'contato'}
     <div class="container">
         <h1>Contato</h1>
         <p>Quer saber mais sobre gatos? Entre em contato pelo email: <b>contato@gatolover.com</b></p>
     </div>
 {/if}
+
+<footer>
+    <p>Feito por Emanuelle Dias - Informática 4B</p>
+    <p>Email: <b>seuemail@exemplo.com</b></p>
+</footer>
+
