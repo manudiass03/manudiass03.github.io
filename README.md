@@ -1,38 +1,31 @@
-# sv
+Projeto: Galeria de Cores de Gatos 🐈
+LINK PARA O SITE: https://manudiass03.github.io/
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Este projeto foi desenvolvido como parte de um trabalho acadêmico para o curso de Informática 4B, com o objetivo de apresentar informações sobre diferentes cores e padrões de gatos. O site é uma plataforma interativa que combina design visual e conteúdo educativo para entreter e informar os amantes de felinos.
+Além do desenvolvimento próprio, contei com a ajuda do meu irmão, que colaborou em algumas partes do código e me auxiliou com melhorias na estrutura do site.
 
-## Creating a project
+Funcionalidades Principais:
+Galeria Interativa de Cores de Gatos:
+O site apresenta uma seção com cartões interativos, onde cada um representa uma cor ou padrão de gato. Cada cartão inclui:
+Nome da cor ou padrão do gato.
+Um fato curioso sobre essa variação.
+Uma imagem representativa do gato.
+Fundo e cores personalizadas para tornar cada categoria única.
 
-If you're seeing this, you've probably already done this step. Congrats!
+Benefícios da Adoção de Gatos:
+Uma seção dedicada a incentivar a adoção responsável de gatos, destacando os benefícios de ter um felino como companheiro, como:
+Redução do estresse e ansiedade.
+Facilidade de cuidado em comparação com outros pets.
+Fortalecimento do vínculo emocional entre tutor e gato.
 
-```bash
-# create a new project in the current directory
-npx sv create
+Navegação Intuitiva:
+O site conta com um menu de navegação simples e funcional, permitindo que o usuário alterne entre:
+Página inicial: Exibe a galeria de cores de gatos e informações sobre adoção.
+Página de contato: Informações de contato para quem deseja saber mais sobre o projeto.
 
-# create a new project in my-app
-npx sv create my-app
-```
+Tecnologias Utilizadas:
+SvelteKit - Framework moderno para construção de aplicações web interativas e eficientes.
+HTML & CSS - Estruturação e estilização do site para um design responsivo e agradável.
+JavaScript - Utilizado para manipular o estado da página e tornar a experiência do usuário mais dinâmica.
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+O projeto foi desenvolvido por Emanuelle Dias, estudante do curso Informática 4B, com o auxílio do meu irmão, que me ajudou a aprimorar a estrutura do código e a implementar algumas melhorias no design e na interatividade do site.
