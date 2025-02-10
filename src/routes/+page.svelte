@@ -2,11 +2,11 @@
     import { onMount } from 'svelte';
     let page = 'home';
     let colors = [
-        { name: 'Branco', fact: 'Gatos brancos podem ter olhos azuis, mas muitos são surdos devido a um gene ligado à cor. Além disso, sua pelagem reflete a luz do sol, tornando-os mais suscetíveis a queimaduras solares.', color: '#D3D3D3', image: 'branco.jpg' },
+        { name: 'Branco', fact: 'Gatos brancos podem ter olhos azuis, mas muitos são surdos devido a um gene ligado à cor. Além disso, sua pelagem reflete a luz do sol, tornando-os mais suscetíveis a queimaduras solares.', color: '#E0E0E0', image: 'branco.jpg' },
         { name: 'Preto', fact: 'Gatos pretos são considerados símbolo de sorte em alguns países. São conhecidos por sua resistência e elegância, além de serem menos propensos a doenças genéticas.', color: '#000000', image: 'preto.jpg' },
         { name: 'Cinza', fact: 'O gato cinza russo é conhecido por sua pelagem macia e personalidade afetuosa. Eles costumam ser brincalhões e leais aos seus donos.', color: '#808080', image: 'cinza.jpg' },
         { name: 'Laranja', fact: 'Gatos laranjas costumam ser machos devido a um gene ligado ao cromossomo X. Eles têm uma personalidade extrovertida e costumam ser muito sociáveis.', color: '#FFA500', image: 'laranja.jpg' },
-        { name: 'Siamês', fact: 'Os siameses nascem brancos e desenvolvem suas cores à medida que crescem. São muito vocais e adoram interagir com seus donos.', color: '#F5DEB3', image: 'siames.jpg' },
+        { name: 'Siamês', fact: 'Os siameses nascem brancos e desenvolvem suas cores à medida que crescem. São muito vocais e adoram interagir com seus donos.', color: '#D2B48C', image: 'siames.jpg' },
         { name: 'Rajado', fact: 'O padrão rajado é o mais comum entre gatos, presente em diversas raças. Eles são ágeis, espertos e ótimos caçadores.', color: '#D2691E', image: 'rajado.jpg' },
         { name: 'Calico', fact: 'Gatos calicos são quase sempre fêmeas devido à combinação genética das cores. Sua pelagem única os torna muito desejados por amantes de gatos.', color: '#FFCC00', image: 'calico.jpg' },
         { name: 'Chocolate', fact: 'Gatos chocolate são raros e geralmente pertencem à raça Havana Brown. São conhecidos por sua personalidade afetuosa e lealdade.', color: '#5C3317', image: 'chocolate.jpg' },
@@ -23,12 +23,14 @@
         background: #f8f9fa;
     }
     nav {
-        background: #333;
+        background: #555;
         color: white;
         padding: 15px;
         display: flex;
         justify-content: center;
         gap: 20px;
+        border-radius: 10px;
+        margin: 10px;
     }
     nav button {
         background: none;
@@ -79,6 +81,13 @@
         text-align: center;
         margin-top: 20px;
     }
+    .adoption-benefits {
+        background: #f0f0f0;
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 10px;
+        max-width: 800px;
+    }
 </style>
 
 <nav>
@@ -97,6 +106,10 @@
                     <small>{cat.fact}</small>
                 </div>
             {/each}
+        </div>
+        <div class="adoption-benefits">
+            <h2>Benefícios de Adotar um Gato</h2>
+            <p>Adotar um gato pode trazer inúmeros benefícios para sua vida. Eles são ótimos companheiros, ajudam a reduzir o estresse e a ansiedade, além de exigirem menos manutenção do que outros pets. Gatos também são independentes, mas adoram carinho e podem criar laços profundos com seus donos. Ao adotar, você também está salvando uma vida e contribuindo para o bem-estar dos animais abandonados.</p>
         </div>
     </div>
 {:else if page === 'contato'}
