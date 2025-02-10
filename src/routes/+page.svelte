@@ -117,7 +117,7 @@
         <p>Quer saber mais sobre gatos? Entre em contato pelo email: <b>emanuelle.dias@estudante.ifms.edu.br</b></p>
     </div>
 {/if}
-</div>
+</div>  
         <div class="big-card">
             <h2>Conheça o Laranjo</h2>
             <img src="laranjo.jpg" alt="Laranjo">
