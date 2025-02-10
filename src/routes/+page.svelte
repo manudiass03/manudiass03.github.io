@@ -2,15 +2,15 @@
     import { onMount } from 'svelte';
     let page = 'home';
     let colors = [
-        { name: 'Branco', fact: 'Gatos brancos podem ter olhos azuis, mas muitos são surdos devido a um gene ligado à cor. Além disso, sua pelagem reflete a luz do sol, tornando-os mais suscetíveis a queimaduras solares.', color: '#E0E0E0', image: 'branco.jpg' },
-        { name: 'Preto', fact: 'Gatos pretos são considerados símbolo de sorte em alguns países. São conhecidos por sua resistência e elegância, além de serem menos propensos a doenças genéticas.', color: '#000000', image: 'preto.jpg' },
-        { name: 'Cinza', fact: 'O gato cinza russo é conhecido por sua pelagem macia e personalidade afetuosa. Eles costumam ser brincalhões e leais aos seus donos.', color: '#808080', image: 'cinza.jpg' },
-        { name: 'Laranja', fact: 'Gatos laranjas costumam ser machos devido a um gene ligado ao cromossomo X. Eles têm uma personalidade extrovertida e costumam ser muito sociáveis.', color: '#FFA500', image: 'laranja.jpg' },
-        { name: 'Siamês', fact: 'Os siameses nascem brancos e desenvolvem suas cores à medida que crescem. São muito vocais e adoram interagir com seus donos.', color: '#D2B48C', image: 'siames.jpg' },
-        { name: 'Rajado', fact: 'O padrão rajado é o mais comum entre gatos, presente em diversas raças. Eles são ágeis, espertos e ótimos caçadores.', color: '#D2691E', image: 'rajado.jpg' },
-        { name: 'Calico', fact: 'Gatos calicos são quase sempre fêmeas devido à combinação genética das cores. Sua pelagem única os torna muito desejados por amantes de gatos.', color: '#FFCC00', image: 'calico.jpg' },
-        { name: 'Chocolate', fact: 'Gatos chocolate são raros e geralmente pertencem à raça Havana Brown. São conhecidos por sua personalidade afetuosa e lealdade.', color: '#5C3317', image: 'chocolate.jpg' },
-        { name: 'Frajola', fact: 'Os gatos Frajola possuem a clássica coloração preta e branca e são conhecidos por serem brincalhões e amigáveis. Seu padrão de cores é popular em diversas raças.', color: '#000000', image: 'frajola.jpg' }
+        { name: 'Branco', fact: 'Gatos brancos podem ter olhos azuis, mas muitos são surdos devido a um gene ligado à cor. Além disso, sua pelagem reflete a luz do sol, tornando-os mais suscetíveis a queimaduras solares.', color: '#E0E0E0', textColor: 'black', image: 'branco.jpg' },
+        { name: 'Preto', fact: 'Gatos pretos são considerados símbolo de sorte em alguns países. São conhecidos por sua resistência e elegância, além de serem menos propensos a doenças genéticas.', color: '#000000', textColor: 'white', image: 'preto.jpg' },
+        { name: 'Cinza', fact: 'O gato cinza russo é conhecido por sua pelagem macia e personalidade afetuosa. Eles costumam ser brincalhões e leais aos seus donos.', color: '#808080', textColor: 'white', image: 'cinza.jpg' },
+        { name: 'Laranja', fact: 'Gatos laranjas costumam ser machos devido a um gene ligado ao cromossomo X. Eles têm uma personalidade extrovertida e costumam ser muito sociáveis.', color: '#FFA500', textColor: 'white', image: 'laranja.jpg' },
+        { name: 'Siamês', fact: 'Os siameses nascem brancos e desenvolvem suas cores à medida que crescem. São muito vocais e adoram interagir com seus donos.', color: '#D2B48C', textColor: 'white', image: 'siames.jpg' },
+        { name: 'Rajado', fact: 'O padrão rajado é o mais comum entre gatos, presente em diversas raças. Eles são ágeis, espertos e ótimos caçadores.', color: '#D2691E', textColor: 'white', image: 'rajado.jpg' },
+        { name: 'Calico', fact: 'Gatos calicos são quase sempre fêmeas devido à combinação genética das cores. Sua pelagem única os torna muito desejados por amantes de gatos.', color: '#FFCC00', textColor: 'black', image: 'calico.jpg' },
+        { name: 'Chocolate', fact: 'Gatos chocolate são raros e geralmente pertencem à raça Havana Brown. São conhecidos por sua personalidade afetuosa e lealdade.', color: '#5C3317', textColor: 'white', image: 'chocolate.jpg' },
+        { name: 'Frajola', fact: 'Os gatos Frajola possuem a clássica coloração preta e branca e são conhecidos por serem brincalhões e amigáveis. Seu padrão de cores é popular em diversas raças.', color: '#000000', textColor: 'white', image: 'frajola.jpg' }
     ];
 </script>
 
@@ -48,7 +48,6 @@
     .card {
         padding: 20px;
         border-radius: 10px;
-        color: white;
         font-weight: bold;
         min-height: 250px;
         display: flex;
@@ -100,7 +99,7 @@
         <h1>Galeria de Cores de Gatos</h1>
         <div class="gallery">
             {#each colors as cat}
-                <div class="card" style="background: {cat.color}">
+                <div class="card" style="background: {cat.color}; color: {cat.textColor}">
                     <img src={cat.image} alt={cat.name}>
                     <p>{cat.name}</p>
                     <small>{cat.fact}</small>
