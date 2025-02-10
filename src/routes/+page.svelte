@@ -107,18 +107,26 @@
             {/each}
         </div>
         <div class="adoption-benefits">
-            <h2>Benefícios de Adotar um Gato</h2>
+            <h2>Benefícios de Adotar um Gato🐈</h2>
             <p>Adotar um gato pode trazer inúmeros benefícios para sua vida. Eles são ótimos companheiros, ajudam a reduzir o estresse e a ansiedade, além de exigirem menos manutenção do que outros pets. Gatos também são independentes, mas adoram carinho e podem criar laços profundos com seus donos. Ao adotar, você também está salvando uma vida e contribuindo para o bem-estar dos animais abandonados.</p>
         </div>
     </div>
 {:else if page === 'contato'}
     <div class="container">
         <h1>Contato</h1>
-        <p>Quer saber mais sobre gatos? Entre em contato pelo email: <b>contato@gatolover.com</b></p>
+        <p>Quer saber mais sobre gatos? Entre em contato pelo email: <b>emanuelle.dias@estudante.ifms.edu.br</b></p>
     </div>
 {/if}
+</div>
+        <div class="big-card">
+            <h2>Conheça o Laranjo</h2>
+            <img src="laranjo.jpg" alt="Laranjo">
+            <p>O Laranjo é um gato muito gordinho e tem cerca de 9 meses. Ele adora sachê, subir na mesa e brincar com bolinhas de papel!</p>
+        </div>
+    </div>
+
 
 <footer>
     <p>Feito por Emanuelle Dias - Informática 4B</p>
-    <p>Email: <b>seuemail@exemplo.com</b></p>
+    <p>Email: <b>emanuelle.dias@estudante.ifms.edu.br</b></p>
 </footer>
